@@ -16,5 +16,10 @@ namespace Zegar.Widoki
         {
             InitializeComponent();
         }
+
+        private void UstawAlarmBTN_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

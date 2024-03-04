@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Zegar.Widoki.StronaAlarm">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+                <TimePicker x:Name="czasTP" Format="hh:mm" TextColor="White" WidthRequest="200"></TimePicker>
+                <Button x:Name="ustawAlarmBTN" Clicked="UstawAlarmBTN_Clicked" CornerRadius="30" Text="ustaw alarm" TextColor="DarkGray" BackgroundColor="White"></Button>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
