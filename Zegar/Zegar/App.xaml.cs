@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Zegar.Widoki;
 
 namespace Zegar
 {
@@ -10,7 +11,7 @@ namespace Zegar
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new StronaZegar();
         }
 
         protected override void OnStart()
