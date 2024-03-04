@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Zegar.Widoki.StronaZegar">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+                <Label x:Name="godzinaTXT" HorizontalOptions="Center" TextColor="White" FontSize="35" Text="08:56:20"></Label>
+                <Label x:Name="dataTXT" HorizontalOptions="Center"  TextColor="White" FontSize="15" Text="04 March 2023"></Label>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
