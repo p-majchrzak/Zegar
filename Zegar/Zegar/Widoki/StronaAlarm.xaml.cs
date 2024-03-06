@@ -19,8 +19,7 @@ namespace Zegar.Widoki
 
         private void UstawAlarmBTN_Clicked(object sender, EventArgs e)
         {
-            long liczba = czasTP.Time.Seconds - DateTime.Now.Second;
-            DisplayAlert(liczba.ToString(), liczba.ToString(), liczba.ToString());
+            LiczCzas();
         }
         public void LiczCzas()
         {
@@ -28,9 +27,19 @@ namespace Zegar.Widoki
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
-
+                    if(DateTime.Now.ToString("hh:mm") == czasTP.Time.ToString().Substring(0, czasTP.Time.ToString().Length - 3))
+                    {
+                        DisplayAlert("Informacja", "Alarm!", "Ok");
+                    }
                 });
-                return true;
+                if (DateTime.Now.ToString("hh:mm") == czasTP.Time.ToString().Substring(0, czasTP.Time.ToString().Length - 3))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
             });
         }
     }
