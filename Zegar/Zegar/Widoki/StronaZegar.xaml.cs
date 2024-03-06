@@ -23,39 +23,7 @@ namespace Zegar.Widoki
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
-                    int godzina = DateTime.Now.Hour;
-                    int minuta = DateTime.Now.Minute;
-                    int sekunda = DateTime.Now.Second;
-
-                    string godzinaTekst = "";
-                    string minutaTekst = "";
-                    string sekundaTekst = "";
-
-                    if(godzina < 10)
-                    {
-                        godzinaTekst = "0" + godzina.ToString();
-                    }
-                    else
-                    {
-                        godzinaTekst = godzina.ToString();
-                    }
-                    if (minuta < 10)
-                    {
-                        minutaTekst = "0" + minuta.ToString();
-                    }
-                    else
-                    {
-                        minutaTekst = minuta.ToString();
-                    }
-                    if (sekunda < 10)
-                    {
-                        sekundaTekst = "0" + sekunda.ToString();
-                    }
-                    else
-                    {
-                        sekundaTekst = sekunda.ToString();
-                    }
-                    godzinaTXT.Text = godzinaTekst + ":" + minutaTekst + ":" + sekundaTekst;
+                    godzinaTXT.Text = DateTime.Now.ToString("hh : mm : ss");
                 });
                 return true;
             });

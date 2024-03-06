@@ -19,7 +19,19 @@ namespace Zegar.Widoki
 
         private void UstawAlarmBTN_Clicked(object sender, EventArgs e)
         {
+            long liczba = czasTP.Time.Seconds - DateTime.Now.Second;
+            DisplayAlert(liczba.ToString(), liczba.ToString(), liczba.ToString());
+        }
+        public void LiczCzas()
+        {
+            Device.StartTimer(new TimeSpan(0, 0, 0, 0, 1), () =>
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
 
+                });
+                return true;
+            });
         }
     }
 }
