@@ -6,7 +6,7 @@
         <Grid>
             <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
                 <Label Text="Ustaw czas: " FontSize="20" TextColor="White"></Label>
-                <TimePicker x:Name="czasTP" Format="hh:mm" TextColor="White" WidthRequest="200"></TimePicker>
+                <Entry x:Name="czasTP" Placeholder="Podaj czas w minutach" PlaceholderColor="White" TextColor="White" WidthRequest="200"></Entry>
                 <Label x:Name="liczonyCzasTXT" Margin="0,20,0,20" HorizontalOptions="Center" Text="00:00" FontSize="30" TextColor="White"></Label>
                 <Button x:Name="StartBTN" Clicked="StartBTN_Clicked" CornerRadius="30" Text="Start" TextColor="DarkGray" BackgroundColor="White"></Button>
             </StackLayout>
