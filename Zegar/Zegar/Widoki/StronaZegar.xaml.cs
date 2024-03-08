@@ -17,12 +17,11 @@ namespace Zegar.Widoki
         {
             InitializeComponent();
 
-            dataTXT.Text = DateTime.Now.Date.ToString("dd MMMM yyyy");
-
             Device.StartTimer(new TimeSpan(0, 0, 1), () =>
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
+                    dataTXT.Text = DateTime.Now.Date.ToString("dd MMMM yyyy");
                     godzinaTXT.Text = DateTime.Now.ToString("hh : mm : ss");
                 });
                 return true;
