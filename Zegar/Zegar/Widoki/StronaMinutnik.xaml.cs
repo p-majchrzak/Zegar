@@ -20,8 +20,14 @@ namespace Zegar.Widoki
 
         private void StartBTN_Clicked(object sender, EventArgs e)
         {
-            iloscCzasu = int.Parse(czasTP.Text) * 60;
-            LiczCzas();
+            try
+            {
+                iloscCzasu = int.Parse(czasTP.Text) * 60;
+                LiczCzas();
+            }
+            catch {
+                DisplayAlert("Informacja", "Podaj ilość minut.", "Ok");
+            }
         }
         public void LiczCzas()
         {
