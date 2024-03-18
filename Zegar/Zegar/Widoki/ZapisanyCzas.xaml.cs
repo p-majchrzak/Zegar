@@ -20,14 +20,18 @@ namespace Zegar.Widoki
         }
         public void Odczyt()
         {
-            StreamReader odczytaj = new StreamReader(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "plik.txt"));
-            List<string> listaOdczytana = new List<string>();
-            if(!odczytaj.EndOfStream)
+            string sciezka = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "plikTekstowy.txt");
+            if(File.Exists(sciezka))
             {
-                listaOdczytana.Add(odczytaj.ReadLine());
+                StreamReader odczytaj = new StreamReader(sciezka);
+                List<string> listaOdczytana = new List<string>();
+                while (!odczytaj.EndOfStream)
+                {
+                    listaOdczytana.Add(odczytaj.ReadLine());
+                }
+                odczytaj.Close();
+                lista.ItemsSource = listaOdczytana;
             }
-            odczytaj.Close();
-            lista.ItemsSource = listaOdczytana;
         }
     }
 }

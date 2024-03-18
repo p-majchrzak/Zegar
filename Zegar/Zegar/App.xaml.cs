@@ -11,7 +11,7 @@ namespace Zegar
         {
             InitializeComponent();
 
-            MainPage = new StronaWyboru();
+            MainPage = new NavigationPage(new StronaWyboru());
         }
 
         protected override void OnStart()
